@@ -12,6 +12,8 @@ const Work = () => {
   const [filterWorks, setFilterWorks] = useState([]);
   const [works, setWorks] = useState([]);
 
+  const [touched, setTouched] = useState(null);
+
   useEffect(() => {
     const query = '*[_type == "works"]';
     client.fetch(query).then((data) => {
@@ -33,6 +35,7 @@ const Work = () => {
       }
     }, 500);
   };
+
   return (
     <>
       <h2 className="head-text">
@@ -60,7 +63,12 @@ const Work = () => {
         className="app__work-portfolio"
       >
         {filterWorks.map((work, index) => (
-          <motion.div className="app__work-item app__flex" key={index}>
+          <motion.div
+            className="app__work-item app__flex"
+            key={index}
+            onClick={() => setTouched(index)}
+            onTouchStart={() => setTouched(index)}
+          >
             <div className="app__work-img app__flex">
               <img src={urlFor(work.imgUrl)} alt={work.title} />
               <motion.div
@@ -70,9 +78,18 @@ const Work = () => {
                   ease: "easeInOut",
                   staggerChildren: 0.5,
                 }}
-                className="app__work-hover app__flex"
+                className={`app__work-hover app__flex ${
+                  touched === index ? "app__work-touched" : ""
+                }`}
+
+                // onTouch={() => setTouched(null)}
               >
-                <a href={work.projectLink} target="_blank" rel="noreferrer">
+                <a
+                  href={work.projectLink}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="app__flex"
+                >
                   <motion.div
                     whileInView={{ scale: [0, 1] }}
                     whileHover={{ scale: [1, 0.9] }}
@@ -82,7 +99,12 @@ const Work = () => {
                     <AiFillEye />
                   </motion.div>
                 </a>
-                <a href={work.codeLink} target="_blank" rel="noreferrer">
+                <a
+                  href={work.codeLink}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="app__flex"
+                >
                   <motion.div
                     whileInView={{ scale: [0, 1] }}
                     whileHover={{ scale: [1, 0.9] }}

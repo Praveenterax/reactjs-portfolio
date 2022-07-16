@@ -68,11 +68,17 @@
 
   .tag-cmp {
     margin-top: 3rem;
-    flex-direction: column;
+    // flex-direction: column;
+    align-items: center;
     p {
       width: 100%;
       text-transform: uppercase;
       text-align: right;
+      color: var(--secondary-color);
+      font-weight: bold;
+    }
+    span {
+      color: var(--secondary-color);
     }
   }
 
@@ -109,6 +115,8 @@
     img {
       width: 60%;
       height: 60%;
+      object-fit: contain;
+      pointer-events: none;
     }
   }
 

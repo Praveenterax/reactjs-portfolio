@@ -10,6 +10,36 @@ const Skills = () => {
   const [skills, setSkills] = useState([]);
   const [experience, setExperience] = useState();
 
+  const skillVariants = {
+    view: {
+      x: [-15, 0],
+      opacity: [0, 1],
+      transition: {
+        x: {
+          type: "spring",
+          stiffness: "10",
+        },
+        duration: 0.5,
+        ease: "easeInOut",
+      },
+    },
+    hover: {
+      y: -7,
+      transition: {
+        duration: 0.3,
+        ease: "easeInOut",
+      },
+    },
+    tap: {
+      y: -7,
+      scale: 1.05,
+      transition: {
+        duration: 0.2,
+        ease: "easeInOut",
+      },
+    },
+  };
+
   useEffect(() => {
     const skillsQuery = '*[_type=="skills"]';
     const experienceQuery = '*[_type=="experiences"]';
@@ -29,11 +59,10 @@ const Skills = () => {
         <motion.div className="app__skills-list">
           {skills.map((skill, index) => (
             <motion.div
-              whileInView={{ x: [-15, 0], opacity: [0, 1] }}
-              transition={{
-                duration: 0.5,
-                ease: "easeInOut",
-              }}
+              variants={skillVariants}
+              whileInView="view"
+              whileHover="hover"
+              whileTap="tap"
               className="app__skills-item app__flex"
               key={skill.name + "-" + index}
             >

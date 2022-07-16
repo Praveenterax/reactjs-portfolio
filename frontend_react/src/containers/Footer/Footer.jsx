@@ -13,7 +13,7 @@ const Footer = () => {
     message: "",
   });
   const [isFormSubmitted, setIsFormSubmitted] = useState(false);
-  const [laoding, setIsLoading] = useState(false);
+  const [loading, setIsLoading] = useState(false);
 
   const { email, message, name } = formData;
 
@@ -91,8 +91,12 @@ const Footer = () => {
               onChange={handleChangeInput}
             />
           </div>
-          <button type="button" className="p-text" onClick={handleSubmit}>
-            {laoding ? "Sending Message" : "Send Message"}
+          <button
+            type="button"
+            className=" portfolio-button"
+            onClick={handleSubmit}
+          >
+            {loading ? "Sending Message" : "Send Message"}
           </button>
         </div>
       ) : (

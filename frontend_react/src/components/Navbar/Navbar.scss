@@ -1,6 +1,5 @@
 .app__navbar {
   width: 100%;
-
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -23,6 +22,7 @@
   img {
     width: 90px;
     height: 20px;
+    // object-fit: scale-down;
   }
 
   @media screen and (min-width: 2000px) {

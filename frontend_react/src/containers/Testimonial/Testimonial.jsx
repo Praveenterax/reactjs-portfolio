@@ -1,10 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import {
-  HiChevronLeft,
-  HiArrowCircleRight,
-  HiChevronRight,
-} from "react-icons/hi";
+import { HiChevronLeft, HiChevronRight } from "react-icons/hi";
 
 import { AppWrap, MotionWrap } from "../../wrapper";
 import { client, urlFor } from "../../client";
@@ -38,7 +34,7 @@ const Testimonial = () => {
     <>
       {testimonials.length && (
         <>
-          <div className="app__testimonial-item app__flex">
+          <div className="app__testimonial-carousel app__flex">
             <img src={urlFor(test.imgurl)} alt={test.name} />
             <div className="app__testimonial-content">
               <p className="p-text">{test.feedback}</p>

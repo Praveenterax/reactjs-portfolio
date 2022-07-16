@@ -127,6 +127,14 @@
       transition: all 0.3s ease;
     }
   }
+
+  &:active {
+    opacity: 1;
+  }
+}
+
+.app__work-touched {
+  opacity: 1;
 }
 
 .app__work-content {

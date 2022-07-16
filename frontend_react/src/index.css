@@ -18,3 +18,7 @@
   margin: 0;
   scroll-behavior: smooth;
 }
+
+img {
+  pointer-events: none;
+}

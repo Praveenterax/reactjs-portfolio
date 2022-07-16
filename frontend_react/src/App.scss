@@ -1,6 +1,7 @@
 .app {
   background-color: var(--primary-color);
   font-family: var(--font-base);
+  // overflow-x: hidden;
 }
 
 .app__whitebg {
@@ -185,5 +186,26 @@
 
   .copyright {
     padding: 2rem;
+  }
+}
+
+.portfolio-button {
+  padding: 1rem 2rem;
+  margin-top: 2rem;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  font-weight: 500;
+  cursor: pointer;
+  color: var(--secondary-color);
+  border: 1px solid var(--secondary-color);
+  background: linear-gradient(var(--secondary-color), var(--secondary-color));
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: 0% 100%;
+  transition: background-size 0.3s ease-in-out, color 0.3s ease-in-out;
+  &:hover {
+    background-size: 100% 100%;
+    color: var(--white-color);
   }
 }

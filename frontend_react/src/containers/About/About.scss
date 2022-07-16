@@ -4,12 +4,63 @@
   width: 100%;
 }
 
+.app__about-context {
+  width: 100%;
+  // height: fit-content;
+  flex: 1;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-top: 2rem;
+  padding: 1rem;
+
+  @media screen and (max-width: 1000px) {
+    width: 80%;
+    flex-direction: column;
+  }
+}
+
+.app__about-img {
+  width: 400px;
+  // height: inherit;
+  // padding: 10px;
+  img {
+    width: 100%;
+    object-fit: contain;
+  }
+
+  @media screen and (max-width: 768px) {
+    width: 80%;
+  }
+}
+
+.app__about-data {
+  width: 100%;
+  margin: 2rem;
+  flex-direction: column;
+  justify-content: flex-start !important;
+  align-items: flex-start !important;
+
+  h2 {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+  }
+  p {
+    text-align: justify;
+    font-size: 1rem;
+    span {
+      font-weight: 800;
+      color: var(--secondary-color);
+    }
+  }
+}
+
 .app__profiles {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: flex-start;
-  margin-top: 2rem;
+  margin-top: 1rem;
 }
 
 .app__profile-item {

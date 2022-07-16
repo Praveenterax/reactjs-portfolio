@@ -102,19 +102,19 @@
     }
   }
 
-  button {
-    padding: 1rem 2rem;
-    border-radius: 10px;
-    border: none;
-    background-color: var(--secondary-color);
+  // button {
+  //   padding: 1rem 2rem;
+  //   border-radius: 10px;
+  //   border: none;
+  //   background-color: var(--secondary-color);
 
-    font-weight: 500;
-    color: var(--white-color);
-    outline: none;
-    margin-top: 2rem;
-    font-family: var(--font-base);
-    cursor: pointer;
-  }
+  //   font-weight: 500;
+  //   color: var(--white-color);
+  //   outline: none;
+  //   margin-top: 2rem;
+  //   font-family: var(--font-base);
+  //   cursor: pointer;
+  // }
 
   @media screen and (max-width: 768px) {
     width: 100%;
