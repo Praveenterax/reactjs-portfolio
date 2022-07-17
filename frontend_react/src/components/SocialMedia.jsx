@@ -4,12 +4,9 @@ import { BsLinkedin, BsInstagram } from "react-icons/bs";
 import { FaFacebookF } from "react-icons/fa";
 
 const SocialMedia = () => {
-  const style = {
-    cursor: "pointer",
-  };
   return (
     <div className="app__social">
-      <div style={style}>
+      <div>
         <a
           href="https://www.linkedin.com/in/praveendunga"
           target="_blank"
@@ -19,7 +16,7 @@ const SocialMedia = () => {
           <BsLinkedin />
         </a>
       </div>
-      <div style={style}>
+      <div>
         <a
           href="https://www.facebook.com/praveenterax"
           target="_blank"
@@ -29,7 +26,7 @@ const SocialMedia = () => {
           <FaFacebookF />
         </a>
       </div>
-      <div style={style}>
+      <div>
         <a
           href="https://www.instagram.com/praveenterax"
           target="_blank"

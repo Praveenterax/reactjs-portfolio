@@ -48,9 +48,19 @@
   p {
     text-align: justify;
     font-size: 1rem;
+    font-family: var(--font-base);
     span {
       font-weight: 800;
       color: var(--secondary-color);
+    }
+  }
+
+  @media screen and (max-width: 1000px) {
+    div:nth-child(3) {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
   }
 }

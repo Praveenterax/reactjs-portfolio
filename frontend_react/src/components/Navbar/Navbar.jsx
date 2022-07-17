@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 import { HiMenuAlt4, HiX } from "react-icons/hi";
 import { motion } from "framer-motion";
@@ -9,18 +9,43 @@ import "./Navbar.scss";
 
 const Navbar = () => {
   const [toggle, setToggle] = useState(false);
+  const [classFloat, setClassFloat] = useState("");
+  const [active, setActive] = useState("");
+
+  useEffect(() => {
+    window.addEventListener("scroll", stickNavBar);
+
+    return () => {
+      window.removeEventListener("scroll", stickNavBar);
+    };
+  }, []);
+
+  const stickNavBar = () => {
+    if (window !== undefined) {
+      let windowHeight = window.scrollY;
+      if (windowHeight > 250) {
+        setClassFloat("navbar-float");
+      } else {
+        setClassFloat("");
+      }
+    }
+  };
 
   return (
-    <nav className="app__navbar">
+    <nav className={`app__navbar ${classFloat}`}>
       <div className="app__navbar-logo">
         <img src={images.logo} alt="logo" />
       </div>
       <ul className="app__navbar-links">
         {["home", "about", "work", "skills", "testimonials", "contact"].map(
           (item) => (
-            <li key={`link-${item}`} className="app__flex p-text">
-              <div />
-              <a href={`#${item}`}>{item}</a>
+            <li
+              key={`link-${item}`}
+              className={`app__flex p-text ${active === item ? "active" : ""}`}
+            >
+              <a href={`#${item}`} onClick={() => setActive(item)}>
+                {item}
+              </a>
             </li>
           )
         )}

@@ -43,7 +43,7 @@ const Work = () => {
       </h2>
 
       <div className="app__work-filter">
-        {["UI/UX", "Web App", "Mobile App", "ReactJS", "All"].map(
+        {["All", "ReactJS", "HTML CSS & JS", "Machine Learning", "Python"].map(
           (item, index) => (
             <div
               key={index}
@@ -61,6 +61,7 @@ const Work = () => {
         animate={animateCard}
         transition={{ duration: 0.5, delayChildren: 0.5 }}
         className="app__work-portfolio"
+        onClick={() => setTouched(null)}
       >
         {filterWorks.map((work, index) => (
           <motion.div
@@ -88,7 +89,9 @@ const Work = () => {
                   href={work.projectLink}
                   target="_blank"
                   rel="noreferrer"
-                  className="app__flex"
+                  className={`app__flex ${
+                    work.projectLink.toLowerCase() === "na" ? "none" : ""
+                  }`}
                 >
                   <motion.div
                     whileInView={{ scale: [0, 1] }}

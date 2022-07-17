@@ -1,10 +1,10 @@
-.app__footer {
+.app__contact {
   flex: 1;
   width: 100%;
   flex-direction: column;
 }
 
-.app__footer-cards {
+.app__contact-cards {
   width: 60%;
   display: flex;
   justify-content: space-evenly;
@@ -12,7 +12,7 @@
   flex-wrap: wrap;
   margin: 4rem 2rem 2rem;
 
-  .app__footer-card {
+  .app__contact-card {
     min-width: 290px;
     display: flex;
     flex-direction: row;
@@ -62,11 +62,11 @@
   }
 }
 
-.app__footer-cards .app__footer-card:last-child {
+.app__contact-cards .app__contact-card:last-child {
   background-color: #f2f7fb;
 }
 
-.app__footer-form {
+.app__contact-form {
   width: 60%;
   flex-direction: column;
   margin: 1rem 2rem;

@@ -5,13 +5,20 @@
   align-items: center;
 
   padding: 1rem 2rem;
-  background-color: rgba($color: #ffffff, $alpha: 0.25);
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
-  border: 1px solid rgba($color: #ffffff, $alpha: 0.18);
+  // background-color: rgba($color: #ffffff, $alpha: 0.25);
+  // backdrop-filter: blur(4px);
+  // -webkit-backdrop-filter: blur(4px);
+  // border: 1px solid rgba($color: #ffffff, $alpha: 0.18);
 
   position: fixed;
   z-index: 2;
+
+  transition: all 0.3s ease;
+}
+
+.navbar-float {
+  background-color: var(--white-color);
+  box-shadow: 0 0px 20px rgba(0, 0, 0, 0.2);
 }
 
 .app__navbar-logo {
@@ -42,41 +49,46 @@
   li {
     margin: 0 1rem;
     cursor: pointer;
-    flex-direction: column;
-
-    div {
-      width: 5px;
-      height: 5px;
-      background: transparent;
-      border-radius: 50%;
-
-      margin-bottom: 5px;
-    }
+    // height: 10px;
 
     a {
       color: var(--gray-color);
-      flex-direction: column;
-
+      // flex-direction: column;
+      margin: 5px 0;
       text-decoration: none;
       text-transform: uppercase;
       font-weight: 600;
 
       transition: all 0.3s ease-in-out;
 
+      &::after {
+        display: block;
+        content: "";
+        border-bottom: 1px solid var(--secondary-color);
+        transform: scaleX(0);
+        transition: transform 0.25s ease-in-out;
+        transform-origin: 100% 50%;
+      }
+
       &:hover {
         color: var(--secondary-color);
       }
-    }
-
-    &:hover {
-      div {
-        background-color: var(--secondary-color);
+      &:hover:after {
+        transform-origin: 0% 50%;
+        transform: scaleX(1);
       }
     }
   }
 
   @media screen and (max-width: 900px) {
     display: none;
+  }
+}
+
+.active {
+  a {
+    color: var(--secondary-color) !important;
+    font-weight: 800;
   }
 }
 
