@@ -1,5 +1,9 @@
 frontend_react/node_modules
 backend_sanity/node_modules
 
+/assets
+
+frontend_react/.env
+
 assets.zip
 schemas.zip
