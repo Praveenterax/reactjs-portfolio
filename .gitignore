@@ -1,5 +1,6 @@
 frontend_react/node_modules
 backend_sanity/node_modules
+frontend_react/build
 
 /assets
 
