@@ -27,7 +27,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/Praveenterax/reactjs-portfolio">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
+    <img src="images/letter-P-circle.svg" alt="Logo" width="80" height="80">
   </a>
 
 <h3 align="center">Portfolio Website - React JS</h3>
@@ -118,12 +118,12 @@ Getting started, to avoid hassle at a later part, go ahead and create an account
   sanity manage
   ```
 - Your project dashboard page pops up in your browser
+  > These are the most important steps
 - Note your project ID for future reference
-  > **This step is most important**
 - Click on **Token** -> **Add new Token**
 - Give it a name and copy the token as it can be viewed only once.
 - Now add your react browser address i.e. your localhost in **CORS ORIGIN**
-- Your mostly done with setting up the backend.
+- You are mostly done with setting up the backend.
 
 ### Installation
 
@@ -132,12 +132,14 @@ Getting started, to avoid hassle at a later part, go ahead and create an account
    ```sh
    git clone https://github.com/Praveenterax/reactjs-portfolio.git
    ```
-3. Install NPM packages
+3. Install NPM packages in the folders [Frontend React](/frontend_react).
+   > Make sure you are in the right folder path in the terminal.
    ```sh
    npm install
    ```
 4. Replace the backend_sanity file contents with your sanity file contents (entire folder).
 5. Run the command and a page with your sanity documents appears.
+   > Make sure you are in the right folder path in the terminal.
    ```
    sanity start
    ```
@@ -147,11 +149,13 @@ Getting started, to avoid hassle at a later part, go ahead and create an account
    REACT_APP_SANITY_PROJECT_ID= "your project id"
    REACT_APP_SANITY_TOKEN= "your api token"
    ```
-8. Run the final command.
+8. Run the final command in the [Frontend React](/frontend_react).
+   > Make sure you are in the right folder path in the terminal.
    ```
    npm start
    ```
 9. Your website is up and running. Make the necessary changes and deloy it.
+10. To add or change necessary documents in **Sanity Studio** refer the [Sanity Docs](https://sanity.io/docs), it is very intuitive and easy.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -184,9 +188,9 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 ## Contact
 
-Your Name - [@Praveenterax](https://instagram.com/Praveenterax) - praveendunga789@gmail.com
+Praveen Dunga - [@Praveenterax](https://instagram.com/Praveenterax) - praveendunga789@gmail.com
 
-Project Link: [https://github.com/Praveenterax/reactjs-portfolio](https://github.com/Praveenterax/reactjs-portfolio)
+Project Link: [https://praveenterax-portfolio.netlify.app](https://praveenterax-portfolio.netlify.app)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
