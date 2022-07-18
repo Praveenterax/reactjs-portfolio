@@ -147,6 +147,14 @@
     margin-top: 1rem;
     line-height: 1.5;
   }
+  h4,
+  p {
+    text-align: center;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    width: 100%;
+  }
 
   .app__work-tag {
     position: absolute;

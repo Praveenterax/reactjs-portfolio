@@ -9,6 +9,14 @@ export default {
       type: "string",
     },
     {
+      name: "profileImg",
+      title: "Profile Picture",
+      type: "image",
+      options: {
+        hotspot: true,
+      },
+    },
+    {
       name: "resume",
       title: "Resume",
       type: "file",

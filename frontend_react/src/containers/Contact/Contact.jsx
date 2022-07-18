@@ -10,12 +10,13 @@ const Contact = () => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
+    subject: "",
     message: "",
   });
   const [isFormSubmitted, setIsFormSubmitted] = useState(false);
   const [loading, setIsLoading] = useState(false);
 
-  const { email, message, name } = formData;
+  const { email, message, subject, name } = formData;
 
   const handleChangeInput = (e) => {
     const { name: fieldName, value } = e.target;
@@ -32,6 +33,7 @@ const Contact = () => {
       _type: "contact",
       name: name,
       email: email,
+      subject: subject,
       message: message,
     };
 
@@ -81,6 +83,16 @@ const Contact = () => {
               value={email}
               onChange={handleChangeInput}
               name="email"
+            />
+          </div>
+          <div className="app__flex">
+            <input
+              type="text"
+              className="p-text"
+              placeholder="Subject"
+              value={subject}
+              onChange={handleChangeInput}
+              name="subject"
             />
           </div>
           <div>
