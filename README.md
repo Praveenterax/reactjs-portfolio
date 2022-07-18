@@ -35,10 +35,12 @@
   <p align="center">
     A well designed portfolio to showcase your skills and achievements. A beautiful and functional portfolio with smooth animations. Built using React JS, Sanity, Framer-motion.
     <br />
+    <a href="https://praveenterax-portfolio.netlify.app" target="_blank" rel="noreferrer"><strong>Portfolio Website</strong></a>
+    <br />
     <a href="https://github.com/Praveenterax/reactjs-portfolio"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/Praveenterax/reactjs-portfolio">View Demo</a>
+    <a href="https://praveenterax-portfolio.netlify.app" target="_blank" rel="noreferrer">View Demo</a>
     ·
     <a href="https://github.com/Praveenterax/reactjs-portfolio/issues">Report Bug</a>
     ·
@@ -103,6 +105,10 @@ Getting started, to avoid hassle at a later part, go ahead and create an account
 
 ### Prerequisites
 
+- Create a folder named \*\*backend_sanity" and navigate the terminal to it.
+  ```
+  cd backend_sanity
+  ```
 - Install the sanity client
   ```sh
   npm install -g @sanity/cli
@@ -137,14 +143,14 @@ Getting started, to avoid hassle at a later part, go ahead and create an account
    ```sh
    npm install
    ```
-4. Replace the backend_sanity file contents with your sanity file contents (entire folder).
+4. Replace the [Backend Sanity](/backend_sanity) file contents with your sanity file contents (entire folder).
 5. Run the command and a page with your sanity documents appears.
    > Make sure you are in the right folder path in the terminal.
    ```
    sanity start
    ```
 6. Add your details to the necessary documents, refer [Sanity](https://www.sanity.io/docs) for better understanding.
-7. Create a .env file in the **Frontend_react** directory with the following
+7. Create a .env file in the [Frontend React](/frontend_react) directory with the following
    ```
    REACT_APP_SANITY_PROJECT_ID= "your project id"
    REACT_APP_SANITY_TOKEN= "your api token"
@@ -154,7 +160,7 @@ Getting started, to avoid hassle at a later part, go ahead and create an account
    ```
    npm start
    ```
-9. Your website is up and running. Make the necessary changes and deloy it.
+9. Your website is up and running. Make the necessary changes and deploy it.
 10. To add or change necessary documents in **Sanity Studio** refer the [Sanity Docs](https://sanity.io/docs), it is very intuitive and easy.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
