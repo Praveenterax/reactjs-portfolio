@@ -8,7 +8,7 @@
   width: 100%;
   // height: fit-content;
   flex: 1;
-  flex-direction: row;
+  flex-direction: row-reverse;
   justify-content: flex-start;
   align-items: flex-start;
   margin-top: 2rem;
@@ -21,16 +21,35 @@
 }
 
 .app__about-img {
-  width: 400px;
-  // height: inherit;
-  // padding: 10px;
-  img {
-    width: 100%;
-    object-fit: contain;
+  // padding: 0 0 1.2rem 0;
+  div {
+    // align-items: flex-start;
+    background: linear-gradient(rgba($color: #6b7688, $alpha: 0.35), #fff);
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    position: relative;
+    // border: 1px solid black;
+    img {
+      position: absolute;
+      bottom: 1.2rem;
+      max-width: 100%;
+      max-height: 100%;
+      box-sizing: border-box;
+      object-fit: cover;
+      transform: scale(1.2);
+    }
   }
 
   @media screen and (max-width: 768px) {
     width: 80%;
+  }
+
+  @media screen and (max-width: 300px) {
+    div {
+      width: 150px;
+      height: 150px;
+    }
   }
 }
 

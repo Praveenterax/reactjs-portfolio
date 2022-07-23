@@ -71,9 +71,12 @@
       padding: 1.25rem;
     }
     @media screen and (max-width: 300px) {
-      width: 100%;
+      min-width: 100%;
       margin: 1rem;
     }
+  }
+  @media screen and (max-width: 300px) {
+    width: 100%;
   }
 }
 
@@ -162,5 +165,14 @@
     background-color: #fff;
     top: -25px;
     border-radius: 10px;
+  }
+}
+
+.app__work-touched-nowrap {
+  .app__work-content {
+    h4,
+    p {
+      white-space: unset;
+    }
   }
 }

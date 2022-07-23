@@ -39,12 +39,16 @@ const About = () => {
 
       <div className="app__about-context app__flex">
         <div className="app__about-img app__flex">
-          <img
-            src={
-              aboutMe.profileImg ? urlFor(aboutMe.profileImg) : images.aboutImg
-            }
-            alt="Profile"
-          />
+          <div className="app__flex">
+            <img
+              src={
+                aboutMe.profileImg
+                  ? urlFor(aboutMe.profileImg)
+                  : images.aboutmine
+              }
+              alt="Profile"
+            />
+          </div>
         </div>
         <div className="app__about-data app__flex">
           <h2 className="head-text">About Me</h2>

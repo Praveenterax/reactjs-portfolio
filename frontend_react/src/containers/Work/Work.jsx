@@ -65,7 +65,9 @@ const Work = () => {
       >
         {filterWorks.map((work, index) => (
           <motion.div
-            className="app__work-item app__flex"
+            className={`app__work-item app__flex ${
+              touched === index ? "app__work-touched-nowrap" : ""
+            }`}
             key={index}
             onClick={() => setTouched(index)}
             onTouchStart={() => setTouched(index)}
@@ -82,8 +84,6 @@ const Work = () => {
                 className={`app__work-hover app__flex ${
                   touched === index ? "app__work-touched" : ""
                 }`}
-
-                // onTouch={() => setTouched(null)}
               >
                 <a
                   href={work.projectLink}
