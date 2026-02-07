@@ -111,25 +111,18 @@ Getting started, to avoid hassle at a later part, go ahead and create an account
   ```
 - Install the sanity client
   ```sh
-  npm install -g @sanity/cli
+  npm install -g sanity
+  sanity init
   ```
 - Login using your preferred way!
 - Enter the project name, press Y and use the default settings.
-- Now use the command
+- Now use the command to verify if studio is up and running
   ```sh
-  sanity start
-  ```
-- Now run the following in the terminal
-  ```
-  sanity manage
+  npm run dev
   ```
 - Your project dashboard page pops up in your browser
   > These are the most important steps
 - Note your project ID for future reference
-- Click on **Token** -> **Add new Token**
-- Give it a name and copy the token as it can be viewed only once.
-- Now add your react browser address i.e. your localhost in **CORS ORIGIN**
-- You are mostly done with setting up the backend.
 
 ### Installation
 
@@ -147,18 +140,18 @@ Getting started, to avoid hassle at a later part, go ahead and create an account
 5. Run the command and a page with your sanity documents appears.
    > Make sure you are in the right folder path in the terminal.
    ```
-   sanity start
+   npm run dev
    ```
 6. Add your details to the necessary documents, refer [Sanity](https://www.sanity.io/docs) for better understanding.
 7. Create a .env file in the [Frontend React](/frontend_react) directory with the following
    ```
-   REACT_APP_SANITY_PROJECT_ID= "your project id"
-   REACT_APP_SANITY_TOKEN= "your api token"
+   VITE_SANITY_PROJECT_ID= "your project id"
+   VITE_SANITY_TOKEN= "your api token"
    ```
 8. Run the final command in the [Frontend React](/frontend_react).
    > Make sure you are in the right folder path in the terminal.
    ```
-   npm start
+   npm run dev
    ```
 9. Your website is up and running. Make the necessary changes and deploy it.
 10. To add or change necessary documents in **Sanity Studio** refer the [Sanity Docs](https://sanity.io/docs), it is very intuitive and easy.
