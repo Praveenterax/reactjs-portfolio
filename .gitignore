@@ -1,10 +1,15 @@
-frontend_react/node_modules
-backend_sanity/node_modules
+node_modules
 frontend_react/build
 
 /assets
 
-frontend_react/.env
-
 assets.zip
 schemas.zip
+
+.env*
+
+# Local reference – do not commit
+frontend_react_v2/fixes-later.txt
+
+frontend_react_v2/
+backend_sanity_v2/
